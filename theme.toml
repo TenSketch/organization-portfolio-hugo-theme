@@ -3,9 +3,9 @@
 
 name = "organization-portfolio-hugo-theme"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = "https://github.com/TenSketch/organization-portfolio-hugo-theme/blob/master/LICENSE"
 description = "A theme used to define and describe any Organization's portfolio, evolution, etc with unique single page designs"
-homepage = "http://example.com/"
+homepage = "https://github.com/TenSketch/organization-portfolio-hugo-theme"
 tags = ["Organization portfolio","company profile","arts","entertainment","dance","music","happiness"]
 features = ["unique design for single pages","bootstrap v4.3.1","customizable"]
 min_version = "0.41"
