@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{{partial "head" .}}
+
+<body class="bg-black">
+  {{partial "singlenav" .}}
+  <div class="micro"></div>
+  <section class="pt-5">
+    <div class="container-fluid">
+      <header class="text-center mb-4">
+        <h2 class="text-white mb-5">Gallery</h2>
+      </header>
+      <div class="row p-0">
+        {{range $index, $val := .Site.Taxonomies.categories.gallery}}
+        <div class="col-lg-3 col-md-4 col-4">
+          <a href="{{.Page.Params.image}}" class="fancybox" aria-label="Prabhat Gallery" rel="group">
+            <img src="{{.Page.Params.image}}" class="zoom" alt="{{.Name}}">
+          </a>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </section>
+  <section class="py-5">
+    <div class="container-fluid">
+      <header class="text-center mb-4">
+        <h2 class="mb-5 text-white">Media</h2>
+      </header>
+      <div class="row">
+        {{range $index, $val := .Site.Taxonomies.categories.media}}
+        <div class="col-lg-3 col-md-4 col-4">
+          <a href="{{.Page.Params.image}}" class="fancybox" aria-label="Prabhat media" rel="group">
+            <img src="{{.Page.Params.image}}" class="zoom" style="border: 1px solid; margin: .5rem" alt="{{.Name}}">
+          </a>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </section>
+  <hr>
+  {{partial "footer" .}}
+  {{partial "scripts" .}}
+  {{partial "youtube" .}}
+</body>
+
+</html>

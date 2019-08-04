@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{{partial "head" .}}
+
+<body>
+    {{partial "navbar" .}}
+    {{block "video" .}}
+    {{end}}
+    {{block "about" .}}
+    {{end}}
+    {{block "repertoire" .}}
+    {{end}}
+    {{block "training" .}}
+    {{end}}
+    {{block "costumes" .}}
+    {{end}}
+    {{block "gallery" .}}
+    {{end}}
+    {{block "media" .}}
+    {{end}}
+    {{partial "footer" .}}
+    {{partial "scripts" .}}
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

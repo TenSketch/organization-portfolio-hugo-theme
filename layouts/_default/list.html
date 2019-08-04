@@ -1,0 +1,177 @@
+{{define "video"}}
+<!-- The video -->
+<header class="v-header">
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="/videos/Kathaastra.mp4" type="video/mp4">
+  </video>
+  <div class="container masthead h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white pt-v">
+          <h1 class="mx-auto my-0">prabhat</h1>
+          <h2 class="text-white mx-auto mt-2 mb-5">The Temple of Art</h2>
+          <a href="#about" class="btn btn-success mbv-3">Enter the temple</a>
+          <a href="{{.Site.BaseURL}}join-prabhat/register/" class="btn btn-primary ml-5">Join Prabhat</a>
+      </div>
+    </div>
+  </div>
+</header>
+{{end}}
+{{define "header"}}
+<!-- Header -->
+<header class="masthead">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0">Prabhat</h1>
+      <h2 class="text-white mx-auto mt-2 mb-5">The Temple of Art</h2>
+      <a href="#about" class="btn btn-success">Enter the temple</a>
+      <a href="#" class="btn btn-primary ml-5">Join Prabhat</a>
+    </div>
+  </div>
+</header>
+{{end}}
+{{define "about"}}
+<!-- About Section -->
+<section id="about" class="about-section text-center">
+  <div class="parallax-overlay">
+      <div class="container">
+          {{range $index, $val := .Site.Taxonomies.tags.about}}
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-white my-4">{{$val.Page.Title}}</h2>
+              <div class="text-white">Prabhat, The Temple of Art is an internationally renowned artistic institution from
+                India. The organization has created stage history with a unique blend of tradition along with sophisticated
+                stage techniques of the present technological era.</div>
+              <a href="{{$val.Page.Permalink}}" class="href-a">Read more</a>
+            </div>
+          </div>
+          {{end}}
+        </div>
+  </div>
+</section>
+{{end}}
+{{define "repertoire"}}
+<!-- repertoire Section -->
+<section id="repertoire" class="projects-section">
+  <div class="container">
+    {{range $index, $val := .Site.Taxonomies.tags.repertoire}}
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="col-xl-8 col-lg-7" style="position: relative;">
+        <img class="img-fluid mb-3 mb-lg-0" src="{{.Page.Params.Image}}" alt="{{.Name}}">
+        <div class="bottom-right">
+          <a href="{{.Permalink}}" class="btn btn-know">Know More</a>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <div class="text-black mb-0">
+              <h4 class="text-lowercase">{{.Title}}</h4>
+           {{.Content}}
+          </div>
+          <a href="{{.Permalink}}"style="text-decoration: underline">Read More</a>
+        </div>
+      </div>
+    </div>
+    {{end}}
+  </div>
+</section>
+{{end}}
+{{define "training"}}
+<section id="training" class="projects-section bg-light">
+  <div class="container">
+    {{range $index, $val := .Site.Taxonomies.tags.training}}
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="col-lg-6">
+          <div class="d-flex h-100">
+        <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Name}}">
+      </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex">
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+              <h4 class="text-white">{{$val.Page.Title}}</h4>
+              <p class="mb-0 text-white">
+                SAMUDYATA - Srichakra Academy of Music, Dance, Yoga, and Theatre Arts<br>
+                Faculty.<br>
+                Prabhat Kala Tapovana.<br>
+              </p>
+              <hr class="d-none d-lg-block mb-0 ml-0">
+              <br>
+              <a href="{{$val.Page.Permalink}}" class="href-a">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{end}}
+    {{range $index, $val := .Site.Taxonomies.tags.harikatha}}
+    <div id="harikatha" class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+          <div class="d-flex h-100">
+        <img class="img-fluid" src="{{.Page.Params.Image}}" alt="{{.Name}}">
+      </div>
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <div class="bg-black project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-right">
+              <h4 class="text-white">{{$val.Page.Title}}</h4>
+              <p class="mb-0 text-white">Karnataka’s <span class="font-italic">Haridaasa</span>’s cult arouses varied
+                questions in one’s mind. The literary works of great saint poets of Karnataka answer questions relating
+                to spiritual experiences, knowledge of Tantra, Vedic wisdom, Societal Culture, Music, Dance, theatre and
+                the like.</p>
+              <hr class="d-none d-lg-block mb-0 mr-0">
+              <br>
+              <a href="https://www.sharatprabhath.com/" class="href-a">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{end}}
+    </div>
+</section>
+{{end}}
+{{define "gallery"}}
+<section id="gallery" class="py-5">
+  <!-- gallery-new-fancybox-->
+  <div class="container-fluid">
+    <header class="text-center mb-4">
+      <h2 class="text-lowercase mb-5">gallery</h2>
+    </header>
+    <div class="row p-0">
+      {{range $index, $val := .Site.Taxonomies.categories.gallery}}
+      <div class="col-lg-3 col-md-4 col-4 p-0">
+        <a href="{{.Page.Params.image}}" class="fancybox" aria-label="Prabhat Gallery" rel="group">
+          <img src="{{.Page.Params.image}}" class="zoom" alt="{{.Name}}">
+        </a>
+      </div>
+      {{end}}
+    <div class="mx-auto mt-5 justify-content-center">
+        <a href="{{.Site.BaseURL}}gallery/home/" class="font-weight-bold display-5">View more</a>
+    </div>  
+    </div>
+    
+  </div>
+</section>
+{{end}}
+
+{{define "costumes"}}
+<!-- Signup Section -->
+<section id="costumes" class="ch parallax">
+  <div class="parallax-overlay">
+      <div class="container">
+          {{range $index, $val := .Site.Taxonomies.tags.costumes}}
+          <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
+              <h2 class="text-white">{{$val.Page.Title}}</h2>
+              <p class="text-white">{{.Summary}}</p>
+              <a href="{{$val.Page.Permalink}}" class="href-a">Read more</a>
+            </div>
+          </div>
+          {{end}} 
+            
+        </div>
+  </div>
+</section>
+{{end}}

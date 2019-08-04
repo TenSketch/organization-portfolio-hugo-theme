@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+{{partial "head" .}}
+
+<body>
+    {{partial "singlenav" .}}
+    <section class="join parallax">
+        <div class="parallax-overlay">
+            <div class="container">
+                <h1 class="text-center mb-5">Join Prabhat form</h1>
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto">
+                        <form name="join_Prabhat" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                            <div class="form-group">
+                                <label>Name of the Parent</label>
+                                <input type="text" class="form-control" placeholder="Enter Parent's name"
+                                    name="Name of the Parent" aria-label="Name of the Parent" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Name of the Student</label>
+                                <input type="text" class="form-control" placeholder="Enter student's name"
+                                    name="Name of the Student" aria-label="Name of the Student" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Institution branch
+                                    area</label>
+                                <input type="text" class="form-control" placeholder="Enter Institution branch area"
+                                    name="Institution branch area" aria-label="Institution branch area" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Contact #</label>
+                                <input type="tel" class="form-control" placeholder="Enter your contact no."
+                                    name="Contact #" aria-label="Contact number" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" name="Email id" aria-describedby="emailHelp"
+                                    placeholder="abc@mail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Profession</label>
+                                <input type="text" class="form-control" placeholder="Enter your Profession"
+                                    name="Profession" aria-label="Profession" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Select course</label>
+                                <select name="course" class="form-control" required="">
+                                    <option value="Bharatanatyam Dance">Bharatanatyam Dance</option>
+                                    <option value="Kathak Dance">Kathak Dance</option>
+                                    <option value="Karnatic Music">Karnatic Music</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea class="form-control" name="Message" placeholder="Enter your message" rows="3"
+                                    aria-label="message" spellcheck="false" required></textarea>
+                            </div>
+                            <div data-netlify-recaptcha="true" class="mb-3"></div>
+                            <input type="submit" class="btn btn-info1" value="Submit" aria-label="Submit button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{partial "footer-join" .}}
+    {{partial "scripts" .}}
+</body>
+
+</html>

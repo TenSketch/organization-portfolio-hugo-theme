@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+{{partial "head" .}}
+
+<body class="bg-black">
+    {{partial "singlenav" .}}
+    {{partial "page-nav-head" .}}
+    {{range $index, $val := .Site.Taxonomies.tags.sidet}}
+    {{partial "page-nav" .}}
+    {{end}}
+  {{partial "page-nav-tail" .}}
+  
+    <section id="sam" class="py-5 mt-5 art-h">
+        <div class="container">
+            <h3 class="text-center text-white my-5 pt-5">SAMUDYATA - Srichakra Academy of Music, Dance,
+                Yoga, and Theatre Arts</h3>
+            <div class="row">
+                {{range $index, $val := .Site.Taxonomies.categories.samudyata}}
+                <div class="col-md-6 col-12 mb-3">
+                    <div class="card card-cost">
+                        <div class="card-body">
+                            <h4 class="card-title  text-white">{{.Page.Title}}</h4>
+                        </div>
+                        <a href="{{.Page.Params.image}}" class="fancybox" aria-label="costumes-portfolio" rel="group">
+                                <img src="{{.Page.Params.image}}" class="img-thumbnail" alt="{{.Name}}">
+                              </a>
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </section>
+    <section id="df" class="join parallax">
+        <div class="parallax-overlay">
+            <div class="container">
+                <h3 class="text-center my-5 pt-3">Dance Faculty</h3>
+                {{range $index, $val := .Site.Taxonomies.tags.df}}
+                <div class="row my-2">
+                    <div class="col-md-6 col-lg-6 mx-auto">
+                        <p class="text-white">{{.Content}}</p>
+                    </div>
+                    <div class="col-md-6 col-lg-6 mx-auto">
+                        <img src="{{.Page.Params.Image}}" class="img-fluid" alt="{{.Name}}">
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </section>
+    <section id="mf" class="reper parallax">
+        <div class="parallax-overlay">
+            <div class="container">
+                <h3 class="text-center my-5 pt-3">Music Faculty</h3>
+                {{range $index, $val := .Site.Taxonomies.tags.mf}}
+                <div class="row my-2">
+                    <div class="col-md-6 col-lg-6 mx-auto">
+                        <img src="{{.Page.Params.Image}}" class="img-fluid" alt="{{.Name}}">
+                    </div>
+                    <div class="col-md-6 col-lg-6 mx-auto">
+                        <p class="text-white">{{.Content}}</p>
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </section>
+    <section id="pkt">
+        <div class="container">
+        </div>
+    </section>
+    {{partial "footer-single" .}}
+    {{partial "scripts" .}}
+    {{partial "youtube" .}}
+</body>
+
+</html>

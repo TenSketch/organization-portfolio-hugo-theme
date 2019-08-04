@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+{{partial "head" .}}
+
+<body class="bg-black">
+    {{partial "singlenav" .}}
+    {{partial "page-nav-head" .}}
+    {{range $index, $val := .Site.Taxonomies.tags.side}}
+    {{partial "page-nav" .}}
+    {{end}}
+  {{partial "page-nav-tail" .}}
+   
+    <section id="tdp" class="reper parallax">
+        <div class="parallax-overlay">
+            <div class="container">
+                <h3 class="text-center font-weight-bold my-5 pt-3">Thematic Dance Productions</h3>
+                {{range $index, $val := .Site.Taxonomies.tags.tdp}}
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 mx-auto">
+                        <p class="text-white">{{.Content}}</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 mx-auto">
+                        <img src="{{.Page.Params.Image}}" class="img-fluid" alt="{{.Name}}">
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </section>
+    <section id="ddb" class="dance parallax">
+        <div class="parallax-overlay">
+            <div class="container">
+                <h3 class="text-center font-weight-bold my-5 pt-3">Dance Drama and Ballets</h3>
+                {{range $index, $val := .Site.Taxonomies.tags.ddb}}
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 mx-auto">
+                        <img src="{{.Page.Params.Image}}" class="img-fluid" alt="{{.Name}}">
+                    </div>
+                    <div class="col-md-8 col-lg-8 mx-auto">
+                        <p class="text-white">{{.Content}}</p>
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </section>
+    <section id="cds" class="cds parallax">
+        <div class="parallax-overlay">
+            <div class="container">
+                <h3 class="text-center font-weight-bold my-5 pt-3">Classical dance sequences</h3>
+                {{range $index, $val := .Site.Taxonomies.tags.cds}}
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 mx-auto">
+                        <p class="text-white">{{.Content}}</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 mx-auto">
+                        <img src="{{.Page.Params.Image}}" class="img-fluid" alt="{{.Name}}">
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </section>
+    {{partial "footer-single" .}}
+    {{partial "scripts" .}}
+    {{partial "youtube" .}}
+</body>
+
+</html>

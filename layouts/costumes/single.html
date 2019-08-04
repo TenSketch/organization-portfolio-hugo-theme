@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+{{partial "head" .}}
+
+<body class="bg-black">
+  {{partial "singlenav" .}}
+  
+ {{partial "page-nav-head" .}}
+    {{range $index, $val := .Site.Taxonomies.tags.sidebar}}
+    {{partial "page-nav" .}}
+    {{end}}
+  {{partial "page-nav-tail" .}}
+  <section id="about" class="join parallax">
+    <div class="parallax-overlay">
+      <div class="container">
+          <h2 class="text-center text-white py-4">Prabhat Costume Designers</h2>
+        {{range $index, $val := .Site.Taxonomies.tags.costumes}}
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+            <p class="text-white">{{.Content}}</p>
+          </div>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" class="py-5">
+    <div class="container">
+      <h1 class="text-center text-white pt-5 my-5">Portfolio</h1>
+      <div class="row">
+        {{range $index, $val := .Site.Taxonomies.categories.grid}}
+        <div class="col-lg-4 col-md-4 p-0">
+          <div class="card card-cost">
+            <div class="card-body">
+              <h4 class="card-title text-white">{{.Page.Title}}</h4>
+              <p class="card-text">{{.Content}}</p>
+            </div>
+            <a href="{{.Page.Params.image}}" class="fancybox" aria-label="costumes-portfolio" rel="group">
+                <img src="{{.Page.Params.image}}" class="img-thumbnail" alt="{{.Name}}">
+              </a>
+            <!-- <img class="img-thumbnail" src="{{.Page.Params.image}}" alt="{{.Name}}"> -->
+          </div>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </section>
+  {{partial "footer-single" .}}
+  {{partial "scripts" .}}
+</body>
+
+</html>

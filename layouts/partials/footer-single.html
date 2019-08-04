@@ -1,0 +1,161 @@
+<!-- Contact Section -->
+<section class="bg-black" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div class="card1 py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-comment-dots text-primary mb-2"></i>
+                        <h3 class="m-0 text-white">Write to Prabhat</h3>
+                        <hr class="my-3">
+                        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                            <div class="form-group">
+                                <label style="text-align:left" for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                    name="Name" aria-label="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact #</label>
+                                <input type="tel" class="form-control" id="contact" placeholder="Enter your contact no."
+                                    name="Contact #" aria-label="Contact number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="Email id" aria-describedby="emailHelp"
+                                    placeholder="abc@mail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name="message" id="message"
+                                    placeholder="Enter your message" rows="3" aria-label="message" spellcheck="false"
+                                    required></textarea>
+                            </div>
+                            <div data-netlify-recaptcha="true" class="recaptcha"></div>
+                            <input type="submit" class="btn btn-info1" value="Submit" aria-label="Submit button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div class="card1 py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-certificate text-primary mb-2"></i>
+                        <h3 class="m-0 text-white">Join Prabhat</h3>
+                        <hr class="my-3">
+                        <h5 class="my-4 text-white">Join the Temple of Art.<br>Book to enroll in our courses.</h5>
+                        <a href="{{.Site.BaseURL}}join-prabhat/register/" class="href-a">
+                            <h3>Bharatanatyam Dance</h3>
+                        </a>
+                        
+                        <a href="{{.Site.BaseURL}}join-prabhat/register/" class="href-a">
+                            <h3>Kathak Dance</h3>
+                        </a>
+                        
+                        <a href="{{.Site.BaseURL}}join-prabhat/register/" class="href-a">
+                            <h3>Karnatic Music</h3>
+                            <!-- <div class="razorpay-embed-btn" data-url="https://rzp.io/l/6U1hMzy" data-text="Buy Now" data-color="#528FF0" data-size="large">
+                                <script>
+                                  (function(){
+                                    var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
+                                    if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
+                                    s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
+                                    rzp && rzp.init && rzp.init()}})();
+                                </script>
+                              </div> -->
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-link text-primary mb-2"></i>
+                        <h4 class="m-0">links</h4>
+                        <hr class="my-3">
+                        <div class="text-black-50">
+                            <ul class="list-unstyled">
+                                <li><a href="{{.Site.BaseURL}}">Home</a></li>
+                                <li class="my-1"><a href="{{.Site.BaseURL}}about/about_prabhat/">About us</a></li>
+                                <li><a href="{{.Site.BaseURL}}repertoire/home/">Our Repertoire</a></li>
+                                <li class="my-1"><a href="{{.Site.BaseURL}}training/home/">Training</a></li>
+                                <li><a href="https://www.sharatprabhath.com/">Harikatha</a></li>
+                                <li class="my-1"><a href="{{.Site.BaseURL}}costumes/home/">Costumes</a></li>
+                                <li><a href="{{.Site.BaseURL}}gallery/home/">Gallery & Media</a></li>
+                                <li class="mt-1"><a href="{{.Site.BaseURL}}join-prabhat/register/">Register a course</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fab fa-pagelines text-primary mb-2"></i>
+                        <h4 class="m-0">Network</h4>
+                        <hr class="my-3">
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.padapa.in/">PADAPA</a></li>
+                            <li class="my-1"><a href="https://www.sharatprabhath.com/">Sharat R Prabhath</a></li>
+                            <li><a href="https://www.prabhathauditoriums.com">Prabhat Auditoriums</a></li>
+                            <li class="my-1"><a href="http://www.prabhathstudios.com/">Prabhat Sound Studio</a></li>
+                            <li><a href="http://www.prabhathstage.com/">Prabhat Lighting and Sound System</a></li>
+                            <li class="my-1"><a href="http://artoholic.co.in/">Prabhath Event Managers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                        <h4 class="m-0">Address</h4>
+                        <hr class="my-3">
+                        <div class="text-black mb-2">17, 5-A main, Obalappa Garden, KR road, Bangalore, KA - 560 070</div>
+                        <i class="fas fa-envelope text-primary mb-2"></i>
+                        <h4 class="m-0">Email</h4>
+                        <hr class="my-3">
+                        <div class="text-black-50 mb-2">
+                            <a href="mailto:info@prabhatha.com" target="_top">info@prabhatha.com</a>
+                        </div>
+                        <div class="text-black-50 mb-2">
+                                <a href="mailto:sharatrprabhath@gmail.com" target="_top">sharatrprabhath@gmail.com</a>
+                            </div>
+
+                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                        <h4 class="m-0">Phone</h4>
+                        <hr class="my-3">
+                        <div class="text-black-50">
+                            <a href="tel:+919986881281">91-9986881281</a>
+                        </div>
+                        <div class="text-black-50">
+                                <a href="tel:+919886576659">91-9886576659</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social d-flex mt-5 justify-content-center">
+                <a href="https://www.youtube.com/channel/UCJ7X3mbP2srKzgibYhw9Hrg" target="_blank" rel="noopener" class="mx-2">
+                    <i class="fab fa-youtube fa-2x"></i>
+                </a>
+                <a href="https://www.facebook.com/PrabhathaDotCom" target="_blank" rel="noopener" class="mx-2">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <!-- <a href="#" class="mx-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a> -->
+            </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-black small text-center text-white">
+    <div class="container">
+        <h6>Made with <i class="fas fa-heart"></i>&nbsp;by <a href="https://www.tensketch.com/" target="_blank" rel="noopener" aria-label="TenSketch link">TenSketch</a><br><br>Copyright &copy; Prabhat 2019</h6>
+    </div>
+</footer>
+<a id="back-to-top" href="#" class="btn btn-primary btn-top back-to-top bt-bottom" role="button"
+        title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><i
+            class="fas fa-chevron-up fa-3x"></i></a>
